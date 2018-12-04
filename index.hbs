@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Punto loopback</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  </head>
+  <body>
+    <p>Parametros <strong>{{ method }}</strong>:</p>
+    <table border="1">
+      <tr>
+        <th>Campo</th>
+        <th>Valor</th>
+      </tr>
+      {{#each values}}
+      <tr>
+        <td>{{ @key }}</td>
+        <td>{{ this }}</td>
+      </tr>
+      {{/each}}
+    </table>
+  </body>
+</html>
