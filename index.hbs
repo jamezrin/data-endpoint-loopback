@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   </head>
   <body>
-    <p>Parametros <strong>{{ method }}</strong>:</p>
+    <p>Parámetros HTTP (<strong>{{ method }}</strong>):</p>
     <table border="1">
       <tr>
         <th>Campo</th>
@@ -16,7 +16,17 @@
         <td>{{ @key }}</td>
         <td>{{ this }}</td>
       </tr>
+      {{else}}
+      <tr>
+        <td colspan="2">
+          <em>Ninguno</em>
+        </td>
+      </tr>
       {{/each}}
     </table>
+
+    <br>
+    <p>Petición realizada:</p>
+    <pre>{{ request }}</pre>
   </body>
 </html>
